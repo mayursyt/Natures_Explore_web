@@ -1,0 +1,147 @@
+/* CSS File Explained: This file defines the layout, colors, typography, and responsive behavior */
+/* Wildlife Page Specific Styles */
+.hero-wildlife {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1546026423-cc4642628d2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+    height: 60vh;
+}
+
+/* Wildlife-specific card styles */
+.wildlife-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.wildlife-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wildlife-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.wildlife-card:hover img {
+    transform: scale(1.05);
+}
+
+.wildlife-info {
+    padding: 1.5rem;
+}
+
+.wildlife-info h3 {
+    color: #2E7D32;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.species-type {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.species-mammal {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.species-bird {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.species-reptile {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.species-fish {
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+/* Conservation status */
+.conservation-status {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.conservation-status span {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.status-lc { color: #2e7d32; } /* Least Concern */
+.status-nt { color: #8bc34a; }  /* Near Threatened */
+.status-vu { color: #ffc107; }  /* Vulnerable */
+.status-en { color: #ff9800; }  /* Endangered */
+.status-cr { color: #f44336; }  /* Critically Endangered */
+
+/* Habitat section */
+.habitat-section {
+    margin-top: 3rem;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.habitat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.habitat-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.habitat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.habitat-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.habitat-card h4 {
+    padding: 1rem;
+    color: #263238;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-wildlife {
+        height: 50vh;
+    }
+    
+    .wildlife-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .habitat-grid {
+        grid-template-columns: 1fr;
+    }
+}
